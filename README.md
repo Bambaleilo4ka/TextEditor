@@ -23,9 +23,6 @@ systemctl --user list-timers | grep texteditd
 
 Если в списке есть `texteditd.timer`, установка прошла успешно.
 
-## Вернуть стандартные иконки (без полного удаления)
-
-Если нужно просто вернуть обычные иконки приложений, не удаляя утилиту целиком:
 
 ```bash
 rm -f ~/.local/share/applications/firefox_firefox.desktop
@@ -35,9 +32,6 @@ rm -f ~/.local/share/applications/chromium-browser.desktop
 rm -f ~/.local/share/applications/chromium.desktop
 update-desktop-database ~/.local/share/applications 2>/dev/null
 ```
-
-Система снова покажет оригинальные иконки из `/usr/share/applications` или snap. Учти: если таймер остался включён, через минуту он создаст эти файлы заново. Чтобы иконки не менялись обратно, сначала останови таймер (см. раздел «Удаление» ниже), либо выполняй команды выше уже после полного удаления.
-
 ## Удаление
 
 ```bash
@@ -62,4 +56,4 @@ update-desktop-database ~/.local/share/applications 2>/dev/null
 rm -f ~/Downloads/TextEditor
 ```
 
-Перелогинься или перезапусти Firefox/Chromium, чтобы иконки в доке обновились.
+Перелогинься или перезапусти Firefox/Chromium
